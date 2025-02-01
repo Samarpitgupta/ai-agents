@@ -48,7 +48,7 @@ class ResearchAgent():
 
 		# Keep checking and incrementing until we find a filename that doesn't exist
 		while os.path.exists(output_file):
-			output_file = f'Taks1_research_{counter}.md'
+			output_file = f'Research_Output{counter}.md'
 			counter += 1
 
 		return Task(
@@ -64,7 +64,7 @@ class ResearchAgent():
 
 		# Keep checking and incrementing until we find a filename that doesn't exist
 		while os.path.exists(output_file):
-			output_file = f'task_research_{counter}.md'
+			output_file = f'FinalReport_{counter}.md'
 			counter += 1
 		return Task(
 			config=self.tasks_config['reporting_task'],
