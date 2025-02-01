@@ -1,17 +1,37 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2025.
+    Execute multidimensional investigation of {topic} including:
+    - Technical specifications/developments
+    - Market/industry impact analysis
+    - Social/cultural implications
+    - Temporal analysis (historical context + 2025+ projections)
+    - Cross-domain connections
+    Validate source credibility and maintain controversy balance
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    Structured knowledge package containing:
+    - 5 Key Insights (categorized by impact level)
+    - Technical Development Timeline (2020-2025+)
+    - Stakeholder Analysis Matrix
+    - 3 Alternative Future Scenarios
+    - Source Reliability Index (1-5 scale)
+    Format: JSON structure with markdown-compatible formatting
   agent: researcher
 
 reporting_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Synthesize research package into context-aware intelligence brief.
+    Auto-determine optimal presentation format based on {topic} characteristics:
+    - Technical Deep Dive (for engineering/science topics)
+    - Policy Brief (for social/government topics)
+    - Strategic Roadmap (for business/industry topics)
+    Include dynamic visualizations proposals and implementation checklists
   expected_output: >
-    A fully fledge reports with the mains topics, each with a full section of information.
-    Formatted as markdown without '```'
+    Adaptive report containing:
+    - Executive Summary (TL;DR)
+    - Core Analysis (modular sections)
+    - Comparative Scenario Analysis
+    - Actionable Recommendations
+    - Temporal Projection Model
+    - Dynamic Visualization Mockups (Mermaid/Chart syntax)
+    Format: Markdown document with section collapse/expand features
   agent: reporting_analyst

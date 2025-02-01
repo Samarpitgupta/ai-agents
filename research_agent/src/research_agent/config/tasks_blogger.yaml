@@ -1,35 +1,83 @@
+# tasks_Blogger.yaml
 identify_trending_topics:
   description: >
-    Utilize Google Trends to identify the most popular topics for blogging in the current week. {topic}
+    Detect authentic trends across:
+    - Search patterns (Google Trends/Bing/YouTube)
+    - Social conversations (Reddit/Twitter/Forums)
+    - News cycle analysis
+    - Cultural undercurrents (meme tracking, podcast mentions)
+    Filter out manufactured trends and identify sustainable topics
   expected_output: >
-    A list of trending topics identified.{topic}
+    Trend Briefing Dossier containing:
+    - 5 Core Trends with Cultural Relevance Scores (1-10)
+    - Trend Origin Analysis
+    - Cross-Platform Engagement Metrics
+    - Predicted Longevity Estimates
+    Format: JSON with markdown annotations
   agent: trend_finder
 
 research_topics:
   description: >
-    Conduct in-depth research on the identified trending topics to uncover the latest developments and gather relevant information.{topic}
+    Conduct multi-source verification research including:
+    - Academic paper analysis
+    - Primary source validation
+    - Expert opinion cross-checking
+    - Historical context alignment
+    Generate accuracy confidence levels for all facts
   expected_output: >
-    A dictionary containing detailed information on each topic.{topic}
+    Verified Research Package:
+    - Fact-Check Matrix (Claims vs Verification Sources)
+    - Contextual Backgrounders
+    - Controversy Flags (areas needing careful handling)
+    - Visual Evidence Repository (charts/images/video clips)
+    Format: Structured Markdown with source annotations
   agent: researcher
 
 analyze_data:
   description: >
-    Analyze the research findings and compile detailed reports, highlighting key insights and data points.{topic}
+    Create narrative blueprints optimized for:
+    - Cognitive flow patterns
+    - Attention span matching
+    - Knowledge scaffolding
+    - Emotional engagement peaks
+    Develop content warnings for complex sections
   expected_output: >
-    Comprehensive reports on each topic, including data analysis and key takeaways.{topic}
+    Story Architecture Document containing:
+    - Narrative Flow Map
+    - Key Concept Dependency Graph
+    - Analogies Bank (complex idea simplifications)
+    - Engagement Hotspots Plan
+    Format: MermaidJS diagrams + explanatory text
   agent: reporting_analyst
 
 create_content:
   description: >
-    Develop engaging and easy-to-understand blog posts based on the analysis reports, ensuring the content is human-like and accessible to a broad audience.{topic}
+    Compose blog post using:
+    - Conversational knowledge transfer techniques
+    - Readability engineering (Flesch-Kincaid optimization)
+    - SEO-natural keyword integration
+    - Multi-format content blending (text, visual metaphors, data snapshots)
+    Include interactive elements for digital consumption
   expected_output: >
-    Finalized blog posts ready for publication.{topic}
+    Publication-Ready Article with:
+    - Adaptive Introduction (multiple hook options)
+    - Modular Content Sections (skimmable yet deep)
+    - Contextual Callouts (expert quotes, data highlights)
+    - Reader Journey Checkpoints (comprehension verification)
+    - Natural Language FAQs (anticipating questions)
+    Format: Enhanced Markdown with semantic HTML5 elements
   agent: content_creator
 
 workflow:
   - from: identify_trending_topics
     to: research_topics
+    review: >
+      Quality check for trend authenticity and cultural alignment
   - from: research_topics
     to: analyze_data
+    review: >
+      Verify accuracy scores and source diversity
   - from: analyze_data
     to: create_content
+    review: >
+      Validate narrative flow against cognitive models
