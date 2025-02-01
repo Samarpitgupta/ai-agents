@@ -1,0 +1,35 @@
+identify_trending_topics:
+  description: >
+    Utilize Google Trends to identify the most popular topics for blogging in the current week. {topic}
+  expected_output: >
+    A list of trending topics identified.{topic}
+  agent: trend_finder
+
+research_topics:
+  description: >
+    Conduct in-depth research on the identified trending topics to uncover the latest developments and gather relevant information.{topic}
+  expected_output: >
+    A dictionary containing detailed information on each topic.{topic}
+  agent: researcher
+
+analyze_data:
+  description: >
+    Analyze the research findings and compile detailed reports, highlighting key insights and data points.{topic}
+  expected_output: >
+    Comprehensive reports on each topic, including data analysis and key takeaways.{topic}
+  agent: reporting_analyst
+
+create_content:
+  description: >
+    Develop engaging and easy-to-understand blog posts based on the analysis reports, ensuring the content is human-like and accessible to a broad audience.{topic}
+  expected_output: >
+    Finalized blog posts ready for publication.{topic}
+  agent: content_creator
+
+workflow:
+  - from: identify_trending_topics
+    to: research_topics
+  - from: research_topics
+    to: analyze_data
+  - from: analyze_data
+    to: create_content
